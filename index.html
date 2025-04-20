@@ -15,38 +15,32 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script', 
     'https://connect.facebook.net/en_US/fbevents.js'); 
     fbq('init', '1024404363116287'); 
+    fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" 
-    src="https://www.facebook.com/tr?id=1024404363116287&ev=PageView&noscript=1" 
-  /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1024404363116287&ev=PageView&noscript=1" />
+  </noscript>
   <!-- End Meta Pixel Code -->
 </head>
 <body>
   <script>
-    // Checar se o evento "Initiate Checkout" já foi registrado no localStorage
     const hasTrackedCheckout = localStorage.getItem('hasTrackedCheckout');
-
     if (!hasTrackedCheckout) {
-      // Registrar o evento Initiate Checkout no Meta Pixel
-      fbq('track', 'InitiateCheckout', {value: '19.99', currency: 'BRL'});
-
-      // Marcar no localStorage que o evento foi registrado
+      fbq('track', 'InitiateCheckout', { value: '19.99', currency: 'BRL' });
       localStorage.setItem('hasTrackedCheckout', 'true');
-    }  
-  
-    // Checar se o evento "Purchase" já foi registrado no localStorage
+    }
+
     const hasTrackedPurchase = localStorage.getItem('hasTrackedPurchase');
-
     if (!hasTrackedPurchase) {
-      // Registrar o evento de compra no Meta Pixel
-      fbq('track', 'Purchase', {value: '19.99', currency: 'BRL'});
-
-      // Marcar no localStorage que o evento foi registrado
+      fbq('track', 'Purchase', { value: '19.99', currency: 'BRL' });
       localStorage.setItem('hasTrackedPurchase', 'true');
     }
 
-    // Redirecionar para o canal VIP
-    window.location.href = "https://t.me/+vpG4A0-BrKw5YmFh";
+    // Aguarda 1 segundo para garantir que os eventos sejam enviados antes do redirecionamento
+    setTimeout(() => {
+      window.location.href = "https://t.me/+vpG4A0-BrKw5YmFh";
+    }, 1000);
   </script>
 </body>
 </html>
