@@ -14,33 +14,18 @@
     t.src=v;s=b.getElementsByTagName(e)[0]; 
     s.parentNode.insertBefore(t,s)}(window, document,'script', 
     'https://connect.facebook.net/en_US/fbevents.js'); 
-    fbq('init', '1024404363116287'); 
-    fbq('track', 'PageView');
+    fbq('init', '971180488545848'); 
+    fbq('track', 'PageView'); // Apenas registra o evento PageView
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" 
-         src="https://www.facebook.com/tr?id=1024404363116287&ev=PageView&noscript=1" />
-  </noscript>
+  <noscript><img height="1" width="1" style="display:none" 
+    src="https://www.facebook.com/tr?id=971180488545848&ev=PageView&noscript=1" 
+  /></noscript>
   <!-- End Meta Pixel Code -->
 </head>
 <body>
   <script>
-    const hasTrackedCheckout = localStorage.getItem('hasTrackedCheckout');
-    if (!hasTrackedCheckout) {
-      fbq('track', 'InitiateCheckout', { value: '19.99', currency: 'BRL' });
-      localStorage.setItem('hasTrackedCheckout', 'true');
-    }
-
-    const hasTrackedPurchase = localStorage.getItem('hasTrackedPurchase');
-    if (!hasTrackedPurchase) {
-      fbq('track', 'Purchase', { value: '19.99', currency: 'BRL' });
-      localStorage.setItem('hasTrackedPurchase', 'true');
-    }
-
-    // Aguarda 1 segundo para garantir que os eventos sejam enviados antes do redirecionamento
-    setTimeout(() => {
-      window.location.href = "https://t.me/+vpG4A0-BrKw5YmFh";
-    }, 1000);
+    // Redirecionar para o canal VIP
+    window.location.href = "https://t.me/+ITXtpSPPxMliMWRh";
   </script>
 </body>
 </html>
