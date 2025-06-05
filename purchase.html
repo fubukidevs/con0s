@@ -28,7 +28,7 @@
 
     if (!hasTrackedCheckout) {
       // Registrar o evento Initiate Checkout no Meta Pixel
-      fbq('track', 'InitiateCheckout', {value: '19.99', currency: 'BRL'});
+      fbq('track', 'InitiateCheckout', {value: '14.90', currency: 'BRL'});
 
       // Marcar no localStorage que o evento foi registrado
       localStorage.setItem('hasTrackedCheckout', 'true');
@@ -39,7 +39,7 @@
 
     if (!hasTrackedPurchase) {
       // Registrar o evento de compra no Meta Pixel
-      fbq('track', 'Purchase', {value: '19.99', currency: 'BRL'});
+      fbq('track', 'Purchase', {value: '14.90', currency: 'BRL'});
 
       // Marcar no localStorage que o evento foi registrado
       localStorage.setItem('hasTrackedPurchase', 'true');
